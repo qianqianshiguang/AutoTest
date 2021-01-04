@@ -22,3 +22,4 @@ Java Automated Test Learning
 
 Course Link:https://coding.imooc.com/class/chapter/204.html
 
+# mukeAutoTest
