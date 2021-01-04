@@ -5,10 +5,14 @@ import org.alanhou.model.InterfaceName;
 import org.alanhou.model.LoginCase;
 import org.alanhou.utils.ConfigFile;
 import org.alanhou.utils.DatabaseUtil;
+import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.json.JSONObject;
@@ -17,6 +21,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.util.*;
 
 public class LoginTest {
 
@@ -63,18 +68,21 @@ public class LoginTest {
 
     private String getResult(LoginCase loginCase) throws IOException {
         HttpPost post = new HttpPost(TestConfig.loginUrl);
-        JSONObject param = new JSONObject();
-        param.put("userName",loginCase.getUserName());
-        param.put("password",loginCase.getPassword());
 
-//        List<NameValuePair> nvps = new ArrayList<NameValuePair>();
-//        nvps.add(new BasicNameValuePair("userName", loginCase.getUserName()));
-//        nvps.add(new BasicNameValuePair("password", loginCase.getPassword()));
-//        post.setEntity(new UrlEncodedFormEntity(nvps));
+//        //json格式传参
+//        JSONObject param = new JSONObject();
+//        param.put("userName",loginCase.getUserName());
+//        param.put("password",loginCase.getPassword());
 
-        post.setHeader("content-type","application/json");
-        StringEntity entity = new StringEntity(param.toString(),"utf-8");
-        post.setEntity(entity);
+//        post.setHeader("content-type","application/json");
+//        StringEntity entity = new StringEntity(param.toString(),"utf-8");
+//        post.setEntity(entity);
+
+        //form格式传参
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("userName", loginCase.getUserName()));
+        params.add(new BasicNameValuePair("password", loginCase.getPassword()));
+        post.setEntity(new UrlEncodedFormEntity(params));
 
         String result;
 
@@ -85,7 +93,8 @@ public class LoginTest {
 //        CloseableHttpResponse response = TestConfig.httpClient.execute(post);
 
         result = EntityUtils.toString(response.getEntity(),"utf-8");
-        TestConfig.store = TestConfig.defaultHttpClient.getCookieStore();
+//        TestConfig.store = TestConfig.defaultHttpClient.getCookieStore();
+        System.out.println(result);
 //
 //        HttpClientContext context = HttpClientContext.create();
 //        context.setCookieStore(TestConfig.store);
