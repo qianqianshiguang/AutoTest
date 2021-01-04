@@ -2,6 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="761302b4-8cf7-47ce-8f9a-439e3b8dd172" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Chapter11/target/classes/org/alanhou/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter11/target/classes/org/alanhou/controller/Demo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter11/target/classes/org/alanhou/model/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter5/target/classes/groupsOnClass.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter5/target/classes/multiThread.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter5/target/classes/parameter.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter5/target/classes/suite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/target/Chapter6-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/test-output/emailable-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/test-output/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter6/test-output/report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/mylog.log.2020-05-14" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/mylog.log.2020-12-22" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -313,7 +329,7 @@
       <workItem from="1590031188691" duration="2675000" />
       <workItem from="1590051936703" duration="1299000" />
       <workItem from="1608601887633" duration="2606000" />
-      <workItem from="1608605816831" duration="29776000" />
+      <workItem from="1608605816831" duration="30005000" />
     </task>
     <servers />
   </component>
